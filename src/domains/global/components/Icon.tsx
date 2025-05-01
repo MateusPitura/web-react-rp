@@ -4,7 +4,7 @@ import { IconsName } from "../types";
 
 interface IconProperties {
   iconName: IconsName;
-  className: string;
+  className?: string;
 }
 
 export default function Icon({
@@ -16,7 +16,7 @@ export default function Icon({
 
   return (
     <div className={className}>
-      <Icon color="inherit" />
+      <Icon color="inherit" fontSize="inherit"/>
     </div>
   );
 }

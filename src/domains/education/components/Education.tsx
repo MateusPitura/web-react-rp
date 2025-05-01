@@ -1,11 +1,14 @@
 import type { ReactNode } from "react";
-import SectionTitle from "../../global/components/SectionTitle";
 import Card from "./Card";
+import SectionContainer from "../../global/components/SectionContainer";
 
 export default function Education(): ReactNode {
   return (
-    <div className="flex flex-col items-center gap-8 px-2 py-8">
-      <SectionTitle title="Formação" className="text-light-on-surface" />
+    <SectionContainer
+      title="Formação"
+      className="bg-light-surface"
+      titleClassName="text-light-on-surface"
+    >
       <div className="flex flex-col gap-4">
         <Card
           title="Graduação em Medicina"
@@ -26,6 +29,6 @@ export default function Education(): ReactNode {
           description="Ênfase em diagnóstico e tratamento de doenças cardiovasculares, com prática em exames como ECG, ecocardiograma e cateterismo"
         />
       </div>
-    </div>
+    </SectionContainer>
   );
 }

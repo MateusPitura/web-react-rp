@@ -1,9 +1,9 @@
-import type { ReactNode } from "react";
-
+import { type ReactNode } from "react";
 import Specialty from "./domains/specialty/components/Specialty";
 import Introduction from "./domains/introduction/components/Introduction";
 import TopBar from "./domains/global/components/TopBar";
 import Education from "./domains/education/components/Education";
+import Rating from "./domains/rating/components/Rating";
 
 export default function App(): ReactNode {
   return (
@@ -11,7 +11,8 @@ export default function App(): ReactNode {
       <TopBar />
       <Introduction />
       <Specialty />
-      <Education/>
+      <Education />
+      <Rating />
     </main>
   );
 }
