@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { type ReactNode } from "react";
 import Card from "./Card";
 import SectionContainer from "../../global/components/SectionContainer";
 
@@ -9,7 +9,7 @@ export default function Education(): ReactNode {
       className="bg-light-surface"
       titleClassName="text-light-on-surface"
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex gap-4 flex-wrap md:flex-nowrap justify-center">
         <Card
           title="Graduação em Medicina"
           university="UEPG"

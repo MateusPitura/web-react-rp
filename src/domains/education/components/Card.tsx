@@ -1,4 +1,6 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface CardProperties {
   title: string;
@@ -13,8 +15,16 @@ export default function Card({
   title,
   university,
 }: CardProperties): ReactNode {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="bg-light-secondary p-4 rounded-md shadow-md text-light-on-secondary flex flex-col gap-2 max-w-72">
+    <div
+      className="bg-light-secondary p-4 rounded-md shadow-md text-light-on-secondary flex flex-col gap-2 max-w-72"
+      data-aos="fade-up"
+    >
       <span className="text-title-large">{title}</span>
       <div className="flex gap-2 justify-between items-center text-light-on-secondary">
         <span className="text-label-large">{university}</span>

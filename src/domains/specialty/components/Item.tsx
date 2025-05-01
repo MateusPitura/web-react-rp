@@ -9,7 +9,7 @@ interface ItemProperties {
 
 export default function Item({ iconName, title }: ItemProperties): ReactNode {
   return (
-    <div className="flex flex-col items-center text-light-on-primary-container ">
+    <div className="flex flex-col items-center text-light-on-primary-container w-36 text-center">
       <Icon className="text-title-large" iconName={iconName} />
       <p className="text-body-large">{title}</p>
     </div>
