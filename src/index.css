@@ -1,5 +1,57 @@
 @import "tailwindcss";
 
+@theme {
+  --color-light-primary: rgb(5 107 91);
+  --color-light-surface-tint: rgb(5 107 91);
+  --color-light-on-primary: rgb(255 255 255);
+  --color-light-primary-container: rgb(160 242 222);
+  --color-light-on-primary-container: rgb(0 32 26);
+  --color-light-secondary: rgb(74 99 93);
+  --color-light-on-secondary: rgb(255 255 255);
+  --color-light-secondary-container: rgb(205 232 224);
+  --color-light-on-secondary-container: rgb(6 32 27);
+  --color-light-tertiary: rgb(67 98 120);
+  --color-light-on-tertiary: rgb(255 255 255);
+  --color-light-tertiary-container: rgb(200 230 255);
+  --color-light-on-tertiary-container: rgb(0 30 47);
+  --color-light-error: rgb(186 26 26);
+  --color-light-on-error: rgb(255 255 255);
+  --color-light-error-container: rgb(255 218 214);
+  --color-light-on-error-container: rgb(65 0 2);
+  --color-light-background: rgb(245 251 247);
+  --color-light-on-background: rgb(23 29 27);
+  --color-light-surface: rgb(245 251 247);
+  --color-light-on-surface: rgb(23 29 27);
+  --color-light-surface-variant: rgb(219 229 224);
+  --color-light-on-surface-variant: rgb(63 73 70);
+  --color-light-outline: rgb(111 121 118);
+  --color-light-outline-variant: rgb(190 201 197);
+  --color-light-shadow: rgb(0 0 0);
+  --color-light-scrim: rgb(0 0 0);
+  --color-light-inverse-surface: rgb(43 50 48);
+  --color-light-inverse-on-surface: rgb(236 242 239);
+  --color-light-inverse-primary: rgb(132 214 195);
+  --color-light-primary-fixed: rgb(160 242 222);
+  --color-light-on-primary-fixed: rgb(0 32 26);
+  --color-light-primary-fixed-dim: rgb(132 214 195);
+  --color-light-on-primary-fixed-variant: rgb(0 81 68);
+  --color-light-secondary-fixed: rgb(205 232 224);
+  --color-light-on-secondary-fixed: rgb(6 32 27);
+  --color-light-secondary-fixed-dim: rgb(177 204 196);
+  --color-light-on-secondary-fixed-variant: rgb(51 75 69);
+  --color-light-tertiary-fixed: rgb(200 230 255);
+  --color-light-on-tertiary-fixed: rgb(0 30 47);
+  --color-light-tertiary-fixed-dim: rgb(171 202 228);
+  --color-light-on-tertiary-fixed-variant: rgb(43 74 95);
+  --color-light-surface-dim: rgb(213 219 216);
+  --color-light-surface-bright: rgb(245 251 247);
+  --color-light-surface-container-lowest: rgb(255 255 255);
+  --color-light-surface-container-low: rgb(239 245 241);
+  --color-light-surface-container: rgb(233 239 236);
+  --color-light-surface-container-high: rgb(227 234 230);
+  --color-light-surface-container-highest: rgb(222 228 224);
+}
+
 :root {
   font-family: Inter, Arial, sans-serif;
   line-height: 1.5;
@@ -14,4 +66,3 @@
 body {
   min-width: 320px;
 }
-

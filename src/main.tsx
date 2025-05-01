@@ -4,6 +4,6 @@ import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div className='bg-red-500'>Teste</div>
+    <div className='bg-light-primary-container'>Teste</div>
   </StrictMode>,
 )
