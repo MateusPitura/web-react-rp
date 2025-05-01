@@ -4,9 +4,10 @@ import SectionTitle from "./SectionTitle";
 import classNames from "classnames";
 
 interface SectionContainerProperties extends Childrenable {
-  title: string;
+  title?: string;
   className?: string;
   titleClassName?: string;
+  id: string;
 }
 
 export default function SectionContainer({
@@ -14,18 +15,22 @@ export default function SectionContainer({
   children,
   titleClassName,
   className,
+  id,
 }: SectionContainerProperties): ReactNode {
   return (
     <section
       className={classNames(
-        "flex flex-col items-center gap-8 px-4 py-8",
+        "flex flex-col items-center gap-8 px-4 py-8 scroll-m-16",
         className
       )}
+      id={id}
     >
-      <SectionTitle
-        title={title}
-        className={classNames("text-light-on-surface", titleClassName)}
-      />
+      {title && (
+        <SectionTitle
+          title={title}
+          className={classNames("text-light-on-surface", titleClassName)}
+        />
+      )}
       {children}
     </section>
   );

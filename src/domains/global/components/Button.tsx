@@ -3,17 +3,19 @@ import { IconsName } from "../types";
 import Icon from "./Icon";
 
 interface ButtonProperties {
-  iconName: IconsName;
+  iconName?: IconsName;
   iconClassName: string;
+  onClick: () => void;
 }
 
 export default function Button({
   iconName,
   iconClassName,
+  onClick
 }: ButtonProperties): ReactNode {
   return (
-    <div className="hover:opacity-50 cursor-pointer">
-      <Icon iconName={iconName} className={iconClassName} />
-    </div>
+    <button className="hover:opacity-50 cursor-pointer" onClick={onClick}>
+      {iconName && <Icon iconName={iconName} className={iconClassName} />}
+    </button>
   );
 }

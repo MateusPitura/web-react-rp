@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
 import Photo from "../../../assets/photo.webp";
+import { sections } from "../../global/constants/sections";
+import SectionContainer from "../../global/components/SectionContainer";
 
 export default function Introduction(): ReactNode {
   return (
-    <section className="flex justify-center px-4 py-8">
+    <SectionContainer className="justify-center" id={sections.introduction.id}>
       <div className="max-w-2xl flex gap-4 flex-wrap justify-center md:flex-nowrap">
         <div className="flex justify-center relative">
           <div className="bg-light-primary h-2 w-16 rounded-md absolute left-[-10px] top-5 shadow-md" />
@@ -27,6 +29,6 @@ export default function Introduction(): ReactNode {
           </p>
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }

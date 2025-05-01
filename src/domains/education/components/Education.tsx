@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import Card from "./Card";
 import SectionContainer from "../../global/components/SectionContainer";
+import { sections } from "../../global/constants/sections";
 
 export default function Education(): ReactNode {
   return (
@@ -8,6 +9,7 @@ export default function Education(): ReactNode {
       title="Formação"
       className="bg-light-surface"
       titleClassName="text-light-on-surface"
+      id={sections.education.id}
     >
       <div className="flex gap-4 flex-wrap md:flex-nowrap justify-center">
         <Card

@@ -4,6 +4,7 @@ import Card from "./Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { sections } from "../../global/constants/sections";
 
 const settings = {
   infinite: true,
@@ -23,6 +24,7 @@ export default function Rating(): ReactNode {
       title="Avaliações"
       className="bg-light-tertiary !px-0"
       titleClassName="text-light-on-tertiary"
+      id={sections.rating.id}
     >
       <div className="max-w-full">
         <Slider {...settings}>
