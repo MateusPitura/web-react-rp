@@ -26,7 +26,7 @@ export default function Rating(): ReactNode {
       titleClassName="text-light-on-tertiary"
       id={sections.rating.id}
     >
-      <div className="max-w-full">
+      <div className="max-w-full h-56 overflow-hidden">
         <Slider {...settings}>
           <Card
             title="Heraclio Barbosa Jr"
