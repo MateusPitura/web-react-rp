@@ -1,0 +1,3 @@
+{
+  "tailwindCSS.classAttributes": ["className", "iconClassName"] // Add tailwind intelisense
+}
