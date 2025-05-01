@@ -53,6 +53,8 @@
   --color-light-surface-container-highest: rgb(222 228 224);
 
   /* FONT */
+  --font-caveat: 'Caveat', sans-serif;
+
   --text-display-large: 3.5625rem; /* 57px */
   --text-display-large--line-height: 4rem; /* 64px */
   --text-display-large--letter-spacing: -0.015625rem; /* -0.25px */

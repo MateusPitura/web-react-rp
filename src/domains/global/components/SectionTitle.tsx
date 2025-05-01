@@ -10,5 +10,5 @@ export default function SectionTitle({
   className,
   title,
 }: SectionTitleProperties): ReactNode {
-  return <h2 className={classNames("text-title-large", className)}>{title}</h2>;
+  return <h2 className={classNames("text-headline-large", className)}>{title}</h2>;
 }

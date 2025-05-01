@@ -18,7 +18,7 @@ export default function SectionContainer({
   return (
     <section
       className={classNames(
-        "flex flex-col items-center gap-8 px-2 py-8",
+        "flex flex-col items-center gap-8 px-4 py-8",
         className
       )}
     >
