@@ -1,10 +1,15 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
+
+import Specialty from "./domains/specialty/components/Specialty";
+import Introduction from "./domains/introduction/components/Introduction";
+import TopBar from "./domains/global/components/TopBar";
 
 export default function App(): ReactNode {
   return (
-    <div className='min-h-screen bg-light-surface'>
-        {/* TODO: name */}
-        <p className='text-light-on-surface text-display-large'>Rinaldo Possagno</p> 
-    </div>
+    <main className="bg-light-surface flex flex-col gap-4">
+      <TopBar/>
+      <Introduction />
+      <Specialty />
+    </main>
   );
 }
