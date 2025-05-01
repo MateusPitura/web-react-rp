@@ -2,32 +2,21 @@ import { useState, type ReactNode } from "react";
 import Link from "./Link";
 import { sections } from "../constants/sections";
 import Button from "./Button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogPortal,
-  DialogTitle,
-} from "@radix-ui/react-dialog";
+
 import classNames from "classnames";
+import Modal from "./Modal";
+import { DialogClose } from "@radix-ui/react-dialog";
 
 export default function TopBar(): ReactNode {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
-      <Dialog open={modalOpen} onOpenChange={setModalOpen}>
-        <DialogPortal>
-          <DialogContent className="fixed top-16 left-0 bg-light-surface p-6 z-10 h-screen w-full">
-            <DialogTitle />
-            <DialogDescription />
-            <DialogClose className="text-start w-full">
-              <Links />
-            </DialogClose>
-          </DialogContent>
-        </DialogPortal>
-      </Dialog>
+      <Modal open={modalOpen} setOpen={setModalOpen}>
+        <DialogClose className="text-start w-full">
+          <Links />
+        </DialogClose>
+      </Modal>
       <header
         className={classNames(
           "h-16 sticky top-0 bg-light-surface p-4 flex items-center gap-2 z-20 text-title-large justify-between",
