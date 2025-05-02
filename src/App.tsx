@@ -6,6 +6,7 @@ import Education from "@/education/components/Education";
 import Rating from "@/rating/components/Rating";
 import Contact from "@/contact/components/Contact";
 import Map from "@/map/components/Map";
+import Footer from "@/global/components/Footer";
 
 export default function App(): ReactNode {
   return (
@@ -17,6 +18,7 @@ export default function App(): ReactNode {
       <Rating />
       <Contact />
       <Map />
+      <Footer/>
     </main>
   );
 }
