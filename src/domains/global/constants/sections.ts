@@ -3,4 +3,5 @@ export const sections = {
   specialty: { id: "specialty", text: "Especialidade" },
   education: { id: "education", text: "Educação" },
   rating: { id: "rating", text: "Avaliação" },
+  contact: { id: "contact", text: "Contato" },
 };

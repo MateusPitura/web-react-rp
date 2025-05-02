@@ -4,6 +4,7 @@ import Introduction from "./domains/introduction/components/Introduction";
 import TopBar from "./domains/global/components/TopBar";
 import Education from "./domains/education/components/Education";
 import Rating from "./domains/rating/components/Rating";
+import Contact from "./domains/contact/components/Contact";
 
 export default function App(): ReactNode {
   return (
@@ -13,6 +14,7 @@ export default function App(): ReactNode {
       <Specialty />
       <Education />
       <Rating />
+      <Contact/>
     </main>
   );
 }
