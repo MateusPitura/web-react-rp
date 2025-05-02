@@ -26,9 +26,9 @@ export default function Card({
       data-aos="fade-up"
     >
       <span className="text-title-large">{title}</span>
-      <div className="flex gap-2 justify-between items-center text-light-on-secondary">
-        <span className="text-label-large">{university}</span>
-        <span className="text-label-large">{period}</span>
+      <div className="flex gap-2 justify-between items-center text-light-outline-variant">
+        <span className="text-label-large font-bold">{university}</span>
+        <span className="text-label-large font-bold">{period}</span>
       </div>
       <span className="text-body-large">{description}</span>
     </div>
