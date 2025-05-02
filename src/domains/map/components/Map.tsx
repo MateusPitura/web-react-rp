@@ -1,6 +1,6 @@
 import SectionContainer from "@/global/components/SectionContainer";
 import { sections } from "@/global/constants/sections";
-import type { ReactNode } from "react";
+import { type ReactNode } from "react";
 
 export default function Map(): ReactNode {
   return (
