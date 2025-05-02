@@ -4,6 +4,7 @@ import Terms from "./domains/pages/components/Terms";
 
 import { createBrowserRouter } from "react-router-dom";
 import PrivacyPolicy from "@/pages/components/PrivacyPolicy";
+import NotFound from "@/pages/components/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/privacypolicy",
         element: <PrivacyPolicy />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
