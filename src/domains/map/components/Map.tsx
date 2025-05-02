@@ -1,0 +1,29 @@
+import SectionContainer from "@/global/components/SectionContainer";
+import { sections } from "@/global/constants/sections";
+import type { ReactNode } from "react";
+
+export default function Map(): ReactNode {
+  return (
+    <SectionContainer
+      id={sections.map.id}
+      className="bg-light-primary-container"
+      title={sections.map.text}
+    >
+      <div className="flex flex-col gap-4">
+        <div className="text-body-large text-center">
+          <p className="text-light-on-primary-container">
+            Rua Padre Ildefonso, 475. Sala 21
+          </p>
+          <p className="text-light-outline">Centro, Ponta Grossa</p>
+        </div>
+        <div className="rounded-md overflow-hidden shadow-md ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.0606562798393!2d-50.16029462372654!3d-25.09980799580157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81a42f8c57a3b%3A0x282c129b2623b785!2sR.%20Padre%20Ildefonso%2C%20475%20-%20Centro%2C%20Ponta%20Grossa%20-%20PR%2C%2084010-070!5e0!3m2!1sen!2sbr!4v1746149841058!5m2!1sen!2sbr"
+            className="w-72 h-60 md:w-2xl md:h-96"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </SectionContainer>
+  );
+}
