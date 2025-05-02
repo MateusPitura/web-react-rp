@@ -1,18 +1,21 @@
-import { useState, type ReactNode } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 
 import classNames from "classnames";
 import { DialogClose } from "@radix-ui/react-dialog";
 import Button from "@/global/components/Button";
 import Modal from "@/global/components/Modal";
 import Navigation from "./Navigation";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function TopBar(): ReactNode {
   const [modalOpen, setModalOpen] = useState(false);
 
+  const { pathname } = useLocation();
+  const isHomePage = useMemo(() => pathname === "/", [pathname]);
+
   return (
     <>
-      <Modal open={modalOpen} setOpen={setModalOpen}>
+      <Modal open={modalOpen && isHomePage} setOpen={setModalOpen}>
         <DialogClose className="text-start w-full">
           <Navigation />
         </DialogClose>
@@ -31,21 +34,25 @@ export default function TopBar(): ReactNode {
             label="Rinaldo Possagno"
           />
         </Link>
-        <div className="hidden md:flex">
-          <Navigation />
-        </div>
-        <div className="block md:hidden">
-          <Button
-            iconName={modalOpen ? "Close" : "Menu"}
-            iconClassName={classNames(
-              "text-light-on-surface transition-transform duration-300",
-              { "rotate-180": modalOpen }
-            )}
-            onClick={() => {
-              setModalOpen((prev) => !prev);
-            }}
-          />
-        </div>
+        {isHomePage && (
+          <>
+            <div className="hidden md:flex">
+              <Navigation />
+            </div>
+            <div className="block md:hidden">
+              <Button
+                iconName={modalOpen ? "Close" : "Menu"}
+                iconClassName={classNames(
+                  "text-light-on-surface transition-transform duration-300",
+                  { "rotate-180": modalOpen }
+                )}
+                onClick={() => {
+                  setModalOpen((prev) => !prev);
+                }}
+              />
+            </div>
+          </>
+        )}
       </header>
     </>
   );
