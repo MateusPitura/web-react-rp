@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Icon from "../../global/components/Icon";
+import Icon from "@/global/components/Icon";
 
 interface CardProperties {
   description: string;

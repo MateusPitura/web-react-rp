@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import Card from "./Card";
-import SectionContainer from "../../global/components/SectionContainer";
-import { sections } from "../../global/constants/sections";
+import SectionContainer from "@/global/components/SectionContainer";
+import { sections } from "@/global/constants/sections";
 
 export default function Education(): ReactNode {
   return (

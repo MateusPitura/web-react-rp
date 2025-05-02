@@ -1,15 +1,15 @@
 import type { ReactNode } from "react";
-import SectionContainer from "../../global/components/SectionContainer";
+import SectionContainer from "@/global/components/SectionContainer";
 import Card from "./Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { sections } from "../../global/constants/sections";
-import Person1 from "../../../assets/person1.webp";
-import Person2 from "../../../assets/person2.webp";
-import Person3 from "../../../assets/person3.webp";
-import Person4 from "../../../assets/person4.webp";
-import Person5 from "../../../assets/person5.webp";
+import { sections } from "@/global/constants/sections";
+import Person1 from "@assets/person1.webp";
+import Person2 from "@assets/person2.webp";
+import Person3 from "@assets/person3.webp";
+import Person4 from "@assets/person4.webp";
+import Person5 from "@assets/person5.webp";
 
 const settings = {
   infinite: true,

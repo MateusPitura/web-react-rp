@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import Icon from "../../global/components/Icon";
-import { IconsName } from "../../global/types";
+import Icon from "@/global/components/Icon";
+import { IconsName } from "@/global/types";
 
 interface ItemProperties {
   iconName: IconsName;

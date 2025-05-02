@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import SectionContainer from "../../global/components/SectionContainer";
-import { sections } from "../../global/constants/sections";
+import SectionContainer from "@/global/components/SectionContainer";
+import { sections } from "@/global/constants/sections";
 import Card from "./Card";
 
 export default function Contact(): ReactNode {

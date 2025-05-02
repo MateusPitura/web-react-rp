@@ -1,10 +1,10 @@
 import { type ReactNode } from "react";
-import Specialty from "./domains/specialty/components/Specialty";
-import Introduction from "./domains/introduction/components/Introduction";
-import TopBar from "./domains/global/components/TopBar";
-import Education from "./domains/education/components/Education";
-import Rating from "./domains/rating/components/Rating";
-import Contact from "./domains/contact/components/Contact";
+import Specialty from "@/specialty/components/Specialty";
+import Introduction from "@/introduction/components/Introduction";
+import TopBar from "@/global/components/TopBar";
+import Education from "@/education/components/Education";
+import Rating from "@/rating/components/Rating";
+import Contact from "@/contact/components/Contact";
 
 export default function App(): ReactNode {
   return (

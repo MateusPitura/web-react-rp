@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Item from "./Item";
-import SectionContainer from "../../global/components/SectionContainer";
-import { sections } from "../../global/constants/sections";
+import SectionContainer from "@/global/components/SectionContainer";
+import { sections } from "@/global/constants/sections";
 
 export default function Specialty(): ReactNode {
   return (

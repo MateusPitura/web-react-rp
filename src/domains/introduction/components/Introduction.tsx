@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
-import Photo from "../../../assets/photo.webp";
-import { sections } from "../../global/constants/sections";
-import SectionContainer from "../../global/components/SectionContainer";
+import Photo from "@assets/photo.webp";
+import { sections } from "@/global/constants/sections";
+import SectionContainer from "@/global/components/SectionContainer";
 
 export default function Introduction(): ReactNode {
   return (
