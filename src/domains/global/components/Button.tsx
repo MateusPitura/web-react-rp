@@ -5,7 +5,7 @@ import Icon from "./Icon";
 interface ButtonProperties {
   iconName?: IconsName;
   iconClassName?: string;
-  onClick: () => void;
+  onClick?: () => void;
   label?: string;
   labelClassName?: string;
 }

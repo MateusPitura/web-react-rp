@@ -1,11 +1,11 @@
 import { useState, type ReactNode } from "react";
-import Link from "./Link";
-import { sections } from "../constants/sections";
-import Button from "./Button";
 
 import classNames from "classnames";
-import Modal from "./Modal";
 import { DialogClose } from "@radix-ui/react-dialog";
+import Button from "@/global/components/Button";
+import Modal from "@/global/components/Modal";
+import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
 
 export default function TopBar(): ReactNode {
   const [modalOpen, setModalOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function TopBar(): ReactNode {
     <>
       <Modal open={modalOpen} setOpen={setModalOpen}>
         <DialogClose className="text-start w-full">
-          <Links />
+          <Navigation />
         </DialogClose>
       </Modal>
       <header
@@ -25,9 +25,14 @@ export default function TopBar(): ReactNode {
           }
         )}
       >
-        <h2 className="text-light-primary font-caveat">Rinaldo Possagno</h2>
+        <Link to="/">
+          <Button
+            labelClassName="text-light-primary font-caveat"
+            label="Rinaldo Possagno"
+          />
+        </Link>
         <div className="hidden md:flex">
-          <Links />
+          <Navigation />
         </div>
         <div className="block md:hidden">
           <Button
@@ -43,17 +48,5 @@ export default function TopBar(): ReactNode {
         </div>
       </header>
     </>
-  );
-}
-
-function Links() {
-  return (
-    <nav className="flex gap-4 md:flex-row flex-col">
-      {Object.values(sections).map((section) => {
-        return (
-          <Link key={section.id} label={section.text} link={`#${section.id}`} />
-        );
-      })}
-    </nav>
   );
 }
