@@ -1,32 +1,30 @@
-import Layout from "@/pages/components/Layout";
-import Home from "./domains/pages/components/Home";
-import Terms from "./domains/pages/components/Terms";
-
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import PrivacyPolicy from "@/pages/components/PrivacyPolicy";
-import NotFound from "@/pages/components/NotFound";
+import { routes } from "./routes";
+import Spinner from "@/global/components/Spinner";
+
+const Layout = lazy(() => import("@/pages/components/Layout"));
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/terms",
-        element: <Terms />,
-      },
-      {
-        path: "/privacypolicy",
-        element: <PrivacyPolicy />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
-      },
-    ],
+    children: routes.map((route) => {
+      return {
+        path: route.path,
+        element: (
+          <Suspense
+            fallback={
+              <div className="flex items-center justify-center flex-1">
+                <Spinner />
+              </div>
+            }
+            key={route.path}
+          >
+            {route.element}
+          </Suspense>
+        ),
+      };
+    }),
   },
 ]);
 
