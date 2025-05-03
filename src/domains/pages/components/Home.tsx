@@ -8,13 +8,13 @@ import Map from "@/map/components/Map";
 
 export default function Home(): ReactNode {
   return (
-    <main className="bg-light-surface flex flex-col gap-4">
+    <div className="bg-light-surface flex flex-col gap-4">
       <Introduction />
       <Specialty />
       <Education />
       <Rating />
       <Contact />
       <Map />
-    </main>
+    </div>
   );
 }

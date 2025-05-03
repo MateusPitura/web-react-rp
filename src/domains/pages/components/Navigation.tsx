@@ -7,7 +7,13 @@ export default function Navigation(): ReactNode {
     <nav className="flex gap-4 md:flex-row flex-col">
       {Object.values(sections).map((section) => {
         return (
-          <Link key={section.id} label={section.text} link={`#${section.id}`} />
+          <Link
+            key={section.id}
+            label={section.text}
+            link={`#${section.id}`}
+            className="text-title-small"
+            target="current"
+          />
         );
       })}
     </nav>
