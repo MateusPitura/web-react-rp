@@ -1,5 +1,6 @@
-import Link from "@/global/components/Link";
+import Anchor from "@/global/components/Anchor";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 export default function NotFound(): ReactNode {
   return (
@@ -19,12 +20,9 @@ export default function NotFound(): ReactNode {
       </ol>
       <p className="text-body-large w-full">
         Você pode voltar para a página inicial clicando{" "}
-        <Link
-          target="current"
-          link="/"
-          label="aqui"
-          className="text-body-large"
-        />
+        <Link to="/">
+          <Anchor label="aqui" className="!text-body-large" />
+        </Link>
       </p>
     </div>
   );
