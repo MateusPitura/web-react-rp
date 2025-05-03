@@ -21,7 +21,7 @@ export default function Image({
       {!loaded && (
         <div
           className={classNames(
-            "absolute inset-0 bg-light-outline animate-pulse rounded-lg",
+            "absolute inset-0 bg-light-outline animate-pulse rounded-md",
             className
           )}
         />
@@ -30,7 +30,7 @@ export default function Image({
         src={src}
         alt="Doctor photo"
         className={classNames(
-          "rounded-lg shadow-md w-full h-full object-cover transition-opacity duration-500",
+          "rounded-md shadow-md w-full h-full object-cover transition-opacity duration-500",
           className,
           {
             "opacity-0": !loaded,
