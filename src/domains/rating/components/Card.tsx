@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Icon from "@/global/components/Icon";
+import Image from "@/global/components/Image";
 
 interface CardProperties {
   description: string;
@@ -18,7 +19,12 @@ export default function Card({
     <div className="w-full flex justify-center">
       <div className="bg-light-surface p-4 shadow-md rounded-md text-light-on-surface flex flex-col gap-2 m-2 min-w-72 max-w-72 min-h-48 max-h-48">
         <div className="flex gap-2 items-center">
-          <img src={image} width={32} height={32} className="rounded-full" />
+          <Image
+            src={image}
+            width={32}
+            aspectRatio="1/1"
+            className="!rounded-full"
+          />
           <p className="text-title-large">{title}</p>
         </div>
         <div className="flex gap-1 justify-between items-center">

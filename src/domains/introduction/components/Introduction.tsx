@@ -1,19 +1,16 @@
-import type { ReactNode } from "react";
-import Photo from "@assets/photo.webp";
+import { type ReactNode } from "react";
 import { sections } from "@/global/constants/sections";
 import SectionContainer from "@/global/components/SectionContainer";
+import Image from "@/global/components/Image";
+import Photo from "@assets/photo.webp";
 
 export default function Introduction(): ReactNode {
   return (
     <SectionContainer className="justify-center" id={sections.introduction.id}>
       <div className="max-w-2xl flex gap-4 flex-wrap justify-center md:flex-nowrap">
         <div className="flex justify-center relative">
-          <div className="bg-light-primary h-2 w-16 rounded-md absolute left-[-10px] top-5 shadow-md" />
-          <img
-            src={Photo}
-            alt="Doctor photo"
-            className="rounded-lg shadow-md max-w-72 h-fit aspect-[9/16]"
-          />
+          <div className="bg-light-primary h-2 w-16 rounded-md absolute left-[-10px] top-5 shadow-md z-10" />
+          <Image width={288} aspectRatio="9/16" src={Photo} />
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-light-on-surface text-display-large">
