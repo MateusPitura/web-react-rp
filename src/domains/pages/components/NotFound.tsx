@@ -21,7 +21,7 @@ export default function NotFound(): ReactNode {
       <p className="text-body-large w-full">
         Você pode voltar para a página inicial clicando{" "}
         <Link to="/">
-          <Anchor label="aqui" className="!text-body-large" />
+          <Anchor label="aqui" />
         </Link>
       </p>
     </div>

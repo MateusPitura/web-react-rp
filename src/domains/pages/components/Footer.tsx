@@ -13,13 +13,10 @@ export default function Footer(): ReactNode {
         </div>
         <div className="flex flex-wrap flex-1 items-center justify-center gap-4">
           <Link to="/terms">
-            <Anchor label="Termos" className="!text-body-large" />
+            <Anchor label="Termos" />
           </Link>
           <Link to="/privacypolicy">
-            <Anchor
-              label="Política de privacidade"
-              className="!text-body-large"
-            />
+            <Anchor label="Política de privacidade" />
           </Link>
         </div>
       </div>

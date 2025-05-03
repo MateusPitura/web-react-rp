@@ -23,10 +23,7 @@ export default function Card({
         <span>{title}</span>
       </div>
       <a href={link} target="_blank">
-        <Anchor
-          className="!text-body-large"
-          label={description}
-        />
+        <Anchor label={description} />
       </a>
     </div>
   );

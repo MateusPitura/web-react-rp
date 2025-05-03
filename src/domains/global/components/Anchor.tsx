@@ -13,7 +13,7 @@ export default function Anchor({
   return (
     <span
       className={classNames(
-        "text-light-on-surface hover:text-light-primary hover:underline cursor-pointer duration-300 text-title-small",
+        "text-light-on-surface hover:text-light-primary hover:underline cursor-pointer duration-300 text-body-large",
         className
       )}
     >
