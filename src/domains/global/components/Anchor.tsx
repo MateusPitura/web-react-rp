@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
 
-interface LinkProperties {
+interface AnchorProperties {
   className?: string;
   label: string;
 }
@@ -9,7 +9,7 @@ interface LinkProperties {
 export default function Anchor({
   label,
   className,
-}: LinkProperties): ReactNode {
+}: AnchorProperties): ReactNode {
   return (
     <span
       className={classNames(

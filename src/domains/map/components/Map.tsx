@@ -8,13 +8,12 @@ export default function Map(): ReactNode {
       id={sections.map.id}
       className="bg-light-primary-container"
       title={sections.map.text}
+      titleClassName="!text-light-on-primary-container"
     >
       <div className="flex flex-col gap-4">
-        <div className="text-body-large text-center">
-          <p className="text-light-on-primary-container">
-            Rua Padre Ildefonso, 475. Sala 21
-          </p>
-          <p className="text-light-outline">Centro, Ponta Grossa</p>
+        <div className="text-center text-light-on-primary-container">
+          <p className="text-body-large">Rua Padre Ildefonso, 475. Sala 21</p>
+          <p className="text-label-large">Centro, Ponta Grossa</p>
         </div>
         <div className="rounded-md overflow-hidden shadow-md ">
           <iframe

@@ -8,7 +8,7 @@ export default function Specialty(): ReactNode {
     <SectionContainer
       title="Especialidades"
       className="bg-light-primary-container"
-      titleClassName="text-light-on-primary-container"
+      titleClassName="!text-light-on-primary-container"
       id={sections.specialty.id}
     >
       <div className="flex gap-4 flex-wrap md:flex-nowrap justify-center">
