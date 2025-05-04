@@ -1,8 +1,7 @@
 import { useMemo, useState, type ReactNode } from "react";
 import classNames from "classnames";
-import { DialogClose } from "@radix-ui/react-dialog";
 import Button from "@/global/components/Button";
-import Modal from "@/global/components/Modal";
+import Menu from "@/global/components/Menu";
 import Navigation from "./Navigation";
 import { Link, useLocation } from "react-router-dom";
 
@@ -10,15 +9,13 @@ export default function TopBar(): ReactNode {
   const [modalOpen, setModalOpen] = useState(false);
 
   const { pathname } = useLocation();
-  const isHomePage = useMemo(() => pathname === "/", [pathname]);
+  const isPageHome = useMemo(() => pathname === "/", [pathname]);
 
   return (
     <>
-      <Modal open={modalOpen && isHomePage} setOpen={setModalOpen}>
-        <DialogClose className="text-start w-full">
-          <Navigation />
-        </DialogClose>
-      </Modal>
+      <Menu open={modalOpen && isPageHome}>
+        <Navigation onClick={() => setModalOpen(false)} />
+      </Menu>
       <header
         className={classNames(
           "h-16 sticky top-0 bg-light-surface p-4 flex items-center gap-2 z-20 text-title-large justify-between",
@@ -33,7 +30,7 @@ export default function TopBar(): ReactNode {
             label="Rinaldo Possagno"
           />
         </Link>
-        {isHomePage && (
+        {isPageHome && (
           <>
             <div className="hidden md:flex">
               <Navigation />
