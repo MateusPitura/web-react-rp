@@ -6,6 +6,7 @@ interface ImageProperties {
   aspectRatio: string;
   src: string;
   className?: string;
+  loading?: "lazy" | "eager";
 }
 
 export default function Image({
@@ -13,6 +14,7 @@ export default function Image({
   width,
   src,
   className,
+  loading = "lazy",
 }: ImageProperties): ReactNode {
   const [loaded, setLoaded] = useState(false);
 
@@ -37,7 +39,7 @@ export default function Image({
             "opacity-100": loaded,
           }
         )}
-        loading="lazy"
+        loading={loading}
         onLoad={() => setLoaded(true)}
       />
     </div>

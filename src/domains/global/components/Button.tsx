@@ -8,6 +8,7 @@ interface ButtonProperties {
   onClick?: () => void;
   label?: string;
   labelClassName?: string;
+  ariaLabel?: string;
 }
 
 export default function Button({
@@ -15,10 +16,11 @@ export default function Button({
   iconClassName,
   onClick,
   label,
-  labelClassName
+  labelClassName,
+  ariaLabel
 }: ButtonProperties): ReactNode {
   return (
-    <button className="hover:opacity-50 cursor-pointer" onClick={onClick}>
+    <button className="hover:opacity-50 cursor-pointer" onClick={onClick} aria-label={ariaLabel}>
       {iconName && <Icon iconName={iconName} className={iconClassName} />}
       {label && <span className={labelClassName}>{label}</span>}
     </button>

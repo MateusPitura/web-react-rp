@@ -29,6 +29,7 @@ export default function Map(): ReactNode {
           )}
           <iframe
             src={map.link}
+            title="Google Maps"
             className={classNames(
               "h-full w-full transition-opacity duration-50",
               {

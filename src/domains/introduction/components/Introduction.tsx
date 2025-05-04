@@ -10,7 +10,12 @@ export default function Introduction(): ReactNode {
       <div className="max-w-2xl flex gap-4 flex-wrap justify-center md:flex-nowrap">
         <div className="flex justify-center relative">
           <div className="bg-light-primary h-2 w-16 rounded-md absolute left-[-10px] top-5 shadow-md z-10" />
-          <Image width={288} aspectRatio="9/16" src={introduction.image} />
+          <Image
+            width={288}
+            aspectRatio="9/16"
+            src={introduction.image}
+            loading="eager"
+          />
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-light-on-surface text-display-large">

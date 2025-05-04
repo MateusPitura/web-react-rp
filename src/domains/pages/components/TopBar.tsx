@@ -46,6 +46,7 @@ export default function TopBar(): ReactNode {
                 onClick={() => {
                   setModalOpen((prev) => !prev);
                 }}
+                ariaLabel="Menu button"
               />
             </div>
           </>
