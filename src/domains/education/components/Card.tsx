@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 interface CardProperties {
   title: string;
-  university: string;
+  institution: string;
   period: string;
   description: string;
 }
@@ -13,7 +13,7 @@ export default function Card({
   description,
   period,
   title,
-  university,
+  institution,
 }: CardProperties): ReactNode {
   useEffect(() => {
     AOS.init();
@@ -27,7 +27,7 @@ export default function Card({
     >
       <span className="text-title-large">{title}</span>
       <div className="flex gap-2 justify-between items-center text-light-outline-variant">
-        <span className="text-label-large font-bold">{university}</span>
+        <span className="text-label-large font-bold">{institution}</span>
         <span className="text-label-large font-bold">{period}</span>
       </div>
       <span className="text-body-large">{description}</span>

@@ -3,12 +3,8 @@ import SectionContainer from "@/global/components/SectionContainer";
 import Card from "./Card";
 import Slider from "react-slick";
 import { sections } from "@/global/constants/sections";
-import Person1 from "@assets/person1.webp";
-import Person2 from "@assets/person2.webp";
-import Person3 from "@assets/person3.webp";
-import Person4 from "@assets/person4.webp";
-import Person5 from "@assets/person5.webp";
 import "slick-carousel/slick/slick.css";
+import { rating } from "@/global/constants/settings";
 
 const settings = {
   infinite: true,
@@ -32,36 +28,15 @@ export default function Rating(): ReactNode {
     >
       <div className="max-w-full h-56 overflow-hidden">
         <Slider {...settings}>
-          <Card
-            title="Heraclio Barbosa Jr"
-            date="6 de abril de 2025"
-            description="Me senti muito bem na consulta e adorei as explicações detalhadas"
-            image={Person1}
-          />
-          <Card
-            title="T.P"
-            date="9 de abril de 2025"
-            description="Atendimento foi ótimo e pontual, educado e atencioso"
-            image={Person2}
-          />
-          <Card
-            title="W.R"
-            date="3 de abril de 2025"
-            description="Suas orientações me ajudaram a colocar a vida em ordem."
-            image={Person3}
-          />
-          <Card
-            title="William"
-            date="26 de março de 2025"
-            description="Estou satisfeito com o atendimento. Acredito muito na recuperação"
-            image={Person4}
-          />
-          <Card
-            title="junior Stival"
-            date="20 de março de 2025"
-            description="Sem palavras para descrever o atendimento. Muito obrigado pela atenção Dr"
-            image={Person5}
-          />
+          {rating.map((item) => (
+            <Card
+              key={item.name}
+              title={item.name}
+              date={item.date}
+              description={item.description}
+              image={item.image}
+            />
+          ))}
         </Slider>
       </div>
     </SectionContainer>

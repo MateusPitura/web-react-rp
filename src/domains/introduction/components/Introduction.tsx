@@ -2,7 +2,7 @@ import { type ReactNode } from "react";
 import { sections } from "@/global/constants/sections";
 import SectionContainer from "@/global/components/SectionContainer";
 import Image from "@/global/components/Image";
-import Photo from "@assets/photo.webp";
+import { introduction } from "@/global/constants/settings";
 
 export default function Introduction(): ReactNode {
   return (
@@ -10,19 +10,15 @@ export default function Introduction(): ReactNode {
       <div className="max-w-2xl flex gap-4 flex-wrap justify-center md:flex-nowrap">
         <div className="flex justify-center relative">
           <div className="bg-light-primary h-2 w-16 rounded-md absolute left-[-10px] top-5 shadow-md z-10" />
-          <Image width={288} aspectRatio="9/16" src={Photo} />
+          <Image width={288} aspectRatio="9/16" src={introduction.image} />
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-light-on-surface text-display-large">
-            <span className="text-light-primary">Dr. </span>
-            Rinaldo Possagno
+            <span className="text-light-primary">{introduction.degree} </span>
+            {introduction.name}
           </h1>
           <p className="text-body-large text-light-on-surface">
-            Médico clínico geral com mais de 10 anos de experiência no cuidado
-            integral à saúde. Formado pela Universidade Estudal de Ponta Grossa
-            (UEPG) e com especialização em Medicina da Família, atua com foco na
-            prevenção, diagnóstico e tratamento de doenças comuns, sempre com
-            uma abordagem humanizada e centrada no paciente
+            {introduction.description}
           </p>
         </div>
       </div>

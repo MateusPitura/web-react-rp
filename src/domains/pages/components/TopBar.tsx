@@ -4,6 +4,7 @@ import Button from "@/global/components/Button";
 import Menu from "@/global/components/Menu";
 import Navigation from "./Navigation";
 import { Link, useLocation } from "react-router-dom";
+import { topBar } from "@/global/constants/settings";
 
 export default function TopBar(): ReactNode {
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function TopBar(): ReactNode {
         <Link to="/">
           <Button
             labelClassName="text-light-primary font-caveat"
-            label="Rinaldo Possagno"
+            label={topBar.name}
           />
         </Link>
         {isPageHome && (
