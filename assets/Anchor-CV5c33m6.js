@@ -1,0 +1,5 @@
+import{g as f,j as p}from"./index-DvpNGmFf.js";var i={exports:{}};/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/var u;function l(){return u||(u=1,function(s){(function(){var o={}.hasOwnProperty;function n(){for(var r="",t=0;t<arguments.length;t++){var e=arguments[t];e&&(r=a(r,c(e)))}return r}function c(r){if(typeof r=="string"||typeof r=="number")return r;if(typeof r!="object")return"";if(Array.isArray(r))return n.apply(null,r);if(r.toString!==Object.prototype.toString&&!r.toString.toString().includes("[native code]"))return r.toString();var t="";for(var e in r)o.call(r,e)&&r[e]&&(t=a(t,e));return t}function a(r,t){return t?r?r+" "+t:r+t:r}s.exports?(n.default=n,s.exports=n):window.classNames=n})()}(i)),i.exports}var m=l();const x=f(m);function d({label:s,className:o}){return p.jsx("span",{className:x("text-light-on-surface hover:text-light-primary hover:underline cursor-pointer duration-300 text-body-large",o),children:s})}export{d as A,x as c,l as r};

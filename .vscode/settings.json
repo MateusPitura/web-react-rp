@@ -1,0 +1,6 @@
+{
+  "tailwindCSS.classAttributes": ["className", "iconClassName", "titleClassName", "labelClassName"], // Add tailwind intelisense for attributes
+  "tailwindCSS.experimental.classRegex": [
+    ["classnames\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"] // Add tailwind intelisense for classNames
+  ]
+}
